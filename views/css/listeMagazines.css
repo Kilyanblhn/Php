@@ -1,0 +1,19 @@
+/* entete */
+
+li{
+    list-style-type: none;
+}
+
+/* listeMagazine */
+.line{
+    display: flex;
+    padding: 10px;
+}
+
+.titleCase{
+    width: 300px;
+}
+
+.iconCase{
+    width: 50px;
+}

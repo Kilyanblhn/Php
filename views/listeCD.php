@@ -1,12 +1,29 @@
-<?php $titre = 'Liste de nos CDs';?>
+<!DOCTYPE html>
+<html>
 
-<h2>Liste de nos CDs</h2>
+<head>
+    <title>Liste de nos CDs</title>
+    <meta charset="utf-8">
+</head>
 
-<?php foreach ($cds as $cd) {?>
-    <ul>
-        <li><?= $cd->titre ?></li>
-    </ul>
+<body>
+<div>
+    <div>
+        <?php include('views/entete.php'); ?>
+    </div>
+    <div class="body">
+        <div class="contenu">
+            <h2>Liste de nos CDs</h2>
 
-<?php } ?>
+            <?php foreach ($cds as $cd) {?>
+                <ul>
+                    <li><?= $cd->titre ?></li>
+                </ul>
 
-<?php require('views/pages.php'); ?>
+            <?php } ?>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

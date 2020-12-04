@@ -7,22 +7,39 @@ require('controllers/MagazineController.php');
 $cdController = new CDController();
 $magazineController = new MagazineController();
 
-$page = isset($_GET['page']) ? $_GET['page'] : "magazine";
-$action = isset($_GET['action']) ? $_GET['action'] : "liste";
+if(isset($_GET['page'])){
+    $page = $_GET['page'];
+} else {
+    $page = 'accueil';
+}
+
+if(isset($_GET['action'])){
+    $action = $_GET['action'];
+} else {
+    $action = 'entete';
+}
 
 switch ($page){
+    case "accueil":default:
+    switch ($action){
+        case "entete":
+            require('views/entete.php');
+    }
     case "magazine":
         switch ($action){
-            case "liste":default:
+            case "liste":
                 $magazineController->getListeMagazines();
                 break;
+            case "modifier":
+                $magazineController->modifierMagazine($_GET["reference"], $_GET["titre"], $_GET["annneePublication"], $_GET["type"]);
+                break;
         }
-    break;
+        break;
     case "cd":
         switch ($action){
             case "liste":default:
-                $cdController->getListeCDs();
-                break;
+            $cdController->getListeCDs();
+            break;
         }
-    break;
+        break;
 }
