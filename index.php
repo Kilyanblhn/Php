@@ -16,6 +16,9 @@ switch ($page){
             case "liste":default:
                 $magazineController->getListeMagazines();
                 break;
+            case "modifier":
+                $magazineController->modifierMagazine($_GET["reference"], $_GET["titre"], $_GET["annneePublication"], $_GET["type"]);
+                break;
         }
     break;
     case "cd":
