@@ -7,17 +7,45 @@ require('controllers/MagazineController.php');
 $cdController = new CDController();
 $magazineController = new MagazineController();
 
-$page = isset($_GET['page']) ? $_GET['page'] : "magazine";
-$action = isset($_GET['action']) ? $_GET['action'] : "liste";
+if(isset($_GET['page'])){
+    $page = $_GET['page'];
+} else {
+    $page = 'accueil';
+}
+
+if(isset($_GET['action'])){
+    $action = $_GET['action'];
+} else {
+    $action = 'entete';
+}
+
+if(isset($_GET['reference'])){
+    $reference = $_GET['reference'];
+} else {
+    $reference = 0;
+}
 
 switch ($page){
+    case "accueil":default:
+        switch ($action){
+            case "entete":
+                require('views/entete.php');
+                break;
+        }
+    break;
     case "magazine":
         switch ($action){
-            case "liste":default:
+            case "liste":
                 $magazineController->getListeMagazines();
                 break;
             case "modifier":
-                $magazineController->modifierMagazine($_GET["reference"], $_GET["titre"], $_GET["annneePublication"], $_GET["type"]);
+                $magazineController->modifierMagazine($_GET["reference"], $_GET["titre"], $_GET["annneePublication"], $_GET["typeMagazine"]);
+                break;
+            case "consulter":
+                $magazineController->getMagazineByRef($reference);
+                break;
+            case "supprimer":
+                $magazineController->supprimerMagazine($reference);
                 break;
         }
     break;

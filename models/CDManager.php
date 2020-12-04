@@ -9,21 +9,21 @@ class CDManager extends Manager
     public function nouveauCD(String $titre, bool $estEmprunte, String $artiste, String $genre){
         $db = $this->dbConnect();
         $stmt = $db->prepare('INSERT INTO `CD` (`titre`, `estEmprunte` `artiste`, `type`) VALUES (:titre, :estEmprunte, :artiste, :genre)');
-        $params = ['titre' => $_POST['titre'], 'estEmprunte' => $_POST['estEmprunte'], 'artiste' => $_POST['artiste'], 'genre' => $_POST['genre']];
+        $params = ['titre' => $_GET['titre'], 'estEmprunte' => $_GET['estEmprunte'], 'artiste' => $_GET['artiste'], 'genre' => $_GET['genre']];
         $stmt->execute($params);
     }
 
     public function modifierCD(int $reference, String $titre, bool $estEmprunte, String $artiste, String $genre){
         $db = $this->dbConnect();
         $stmt = $db->prepare('UPDATE `CD` SET titre = :titre, estEmprunte = :estEmprunte, artiste = :artiste, genre = :genre WHERE (`reference` = :reference)');
-        $params = ['reference' => $_POST['reference'], 'titre' => $_POST['titre'], 'estEmprunte' => $_POST['estEmprunte'], 'artiste' => $_POST['artiste'], 'genre' => $_POST['genre']];
+        $params = ['reference' => $_GET['reference'], 'titre' => $_GET['titre'], 'estEmprunte' => $_GET['estEmprunte'], 'artiste' => $_GET['artiste'], 'genre' => $_GET['genre']];
         $stmt->execute($params);
     }
 
     public function supprimerCD($reference){
         $db = $this->dbConnect();
         $stmt = $db->prepare('DELETE FROM `CD` WHERE `reference` = :reference');
-        $params = ['reference' => $_POST['reference']];
+        $params = ['reference' => $_GET['reference']];
         $stmt->execute($params);
     }
 

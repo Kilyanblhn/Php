@@ -5,19 +5,20 @@ require_once("models/objets/Exemplaire.php");
 class Magazine extends Exemplaire
 {
     public int $anneePublication;
-    public String $type;
+    public String $typeMagazine;
 
     /**
      * Magazine constructor.
+     * @param int $reference
      * @param String $titre
      * @param int $anneePublication
-     * @param String $type
+     * @param string $typeMagazine
      */
-    public function __construct(int $reference, String $titre, int $anneePublication, string $type)
+    public function __construct(int $reference, String $titre, int $anneePublication, string $typeMagazine)
     {
         parent::__construct($reference,$titre);
         $this->anneePublication = $anneePublication;
-        $this->type = $type;
+        $this->typeMagazine = $typeMagazine;
     }
 
     /**
@@ -39,17 +40,17 @@ class Magazine extends Exemplaire
     /**
      * @return String
      */
-    public function getType(): string
+    public function getTypeMagazine(): string
     {
         return $this->type;
     }
 
     /**
-     * @param String $type
+     * @param string $typeMagazine
      */
-    public function setType(string $type): void
+    public function setTypeMagazine(string $typeMagazine): void
     {
-        $this->type = $type;
+        $this->typeMagazine = $typeMagazine;
     }
 
 }

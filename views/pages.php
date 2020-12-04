@@ -13,7 +13,7 @@
     </div>
     <div class="body">
         <div class="contenu">
-            <?php  ?>
+            <?php ?>
         </div>
     </div>
 </div>

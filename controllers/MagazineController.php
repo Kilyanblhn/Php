@@ -15,16 +15,18 @@ class MagazineController
         $this->magazineManager = new MagazineManager();
     }
 
-    function nouveauMagazine($titre, $anneePublication, $type){
-        $this->magazineManager->nouveauMagazine($titre, $anneePublication, $type);
+    function nouveauMagazine($reference, $titre, $anneePublication, $typeMagazine){
+        $this->magazineManager->nouveauMagazine($reference, $titre, $anneePublication, $typeMagazine);
     }
 
-    function modifierMagazine($id, $titre, $anneePublication, $type){
-        $this->magazineManager->modifierMagazine($id, $titre, $anneePublication, $type);
+    function modifierMagazine($reference, $titre, $anneePublication, $typeMagazine){
+        $this->magazineManager->modifierMagazine($reference, $titre, $anneePublication, $typeMagazine);
+        header('Location: ?page=magazine&action=liste');
     }
 
-    function supprimerMagazine($id){
-        $this->magazineManager->supprimerMagazine($id);
+    function supprimerMagazine($ref){
+        $this->magazineManager->supprimerMagazine($ref);
+        header("Location: ?page=magazine&action=liste");
     }
 
     function getListeMagazines(){
@@ -32,7 +34,8 @@ class MagazineController
         require('views/listeMagazines.php');
     }
 
-    function getMagazineById($id){
-        $magazine = $this->magazineManager->getMagazineById($id);
+    function getMagazineByRef($reference){
+        $magazine = $this->magazineManager->getMagazineByRef($reference);
+        require('views/modifierMagazine.php');
     }
 }
