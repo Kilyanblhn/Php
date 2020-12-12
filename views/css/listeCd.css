@@ -1,0 +1,24 @@
+body{
+    font-family: "Comfortaa", sans-serif;
+}
+
+.list-cd-body{
+    margin: 50px;
+}
+
+.clr{
+    color: #50c29c;
+}
+
+.line{
+    display: flex;
+    padding: 10px;
+}
+
+.titleCase{
+    width: 300px;
+}
+
+.iconCase{
+    width: 50px;
+}

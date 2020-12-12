@@ -1,0 +1,25 @@
+
+body{
+    font-family: "Comfortaa", sans-serif;
+}
+
+.list-mag-body{
+    margin: 50px;
+}
+
+.clr{
+    color: #608fc2;
+}
+
+.line{
+    display: flex;
+    padding: 10px;
+}
+
+.titleCase{
+    width: 300px;
+}
+
+.iconCase{
+    width: 50px;
+}
