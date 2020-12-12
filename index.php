@@ -38,8 +38,20 @@ switch ($page){
             case "liste":
                 $magazineController->getListeMagazines();
                 break;
+            case "ajouter":
+                require('views/nouveauMagazine.php');
+                break;
+            case "creer":
+                if(isset($_POST["reference"]) && isset($_POST["titre"]) && isset($_POST["anneePublication"]) && isset($_POST["typeMagazine"])){
+                    $_SESSION["referenceMagazine"] = $_POST["reference"];
+                    $_SESSION["titreMagazine"] = $_POST["titre"];
+                    $_SESSION["anneePublication"] = $_POST["anneePublication"];
+                    $_SESSION["typeMagazine"] = $_POST["typeMagazine"];
+                }
+                $magazineController->nouveauMagazine($_POST["reference"], $_POST["titre"], $_POST["anneePublication"], $_POST["typeMagazine"]);
+                break;
             case "modifier":
-                $magazineController->modifierMagazine($_GET["reference"], $_GET["titre"], $_GET["annneePublication"], $_GET["typeMagazine"]);
+                $magazineController->modifierMagazine($_POST["reference"], $_POST["titre"], $_POST["anneePublication"], $_POST["typeMagazine"]);
                 break;
             case "consulter":
                 $magazineController->getMagazineByRef($reference);

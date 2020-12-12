@@ -17,6 +17,7 @@ class MagazineController
 
     function nouveauMagazine($reference, $titre, $anneePublication, $typeMagazine){
         $this->magazineManager->nouveauMagazine($reference, $titre, $anneePublication, $typeMagazine);
+        header('Location: ?page=magazine&action=liste');
     }
 
     function modifierMagazine($reference, $titre, $anneePublication, $typeMagazine){

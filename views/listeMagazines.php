@@ -47,6 +47,8 @@
                 </ul>
 
             <?php } ?>
+
+            <a href="?page=magazine&action=ajouter""><input value="Ajouter un magazine" type="button"></a>
         </div>
     </div>
 </div>

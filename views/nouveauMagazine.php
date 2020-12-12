@@ -13,30 +13,30 @@
     </div>
     <div class="body">
         <div class="contenu">
-            <h2>Modifier le magazine</h2>
-            <form action="?page=magazine&action=modifier" method="post">
+            <h2>Ajouter un magazine à la bbliothèque</h2>
+            <form action="?page=magazine&action=creer" method="post">
                 <table>
                     <thead>
                     <tr>
-                        <th colspan="2"><?= $magazine->titre ?></th>
+                        <th colspan="2">Informations</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
-                        <td><label for="reference">Référence</label></td>
-                        <td><input type="number" name="reference" value="<?= $magazine->reference ?>" readonly></td>
+                        <td><label for="titre">Référence</label></td>
+                        <td><input type="text" name="reference" id="reference" value="<?= isset($_SESSION["referenceMagazine"]) ? $_SESSION["referenceMagazine"] : '' ?>" required></td>
                     </tr>
                     <tr>
                         <td><label for="titre">Titre</label></td>
-                        <td><input type="text" name="titre" id="titre" value="<?= $magazine->titre ?>" required></td>
+                        <td><input type="text" name="titre" id="titre" value="<?= isset($_SESSION["titreMagazine"]) ? $_SESSION["titreMagazine"] : '' ?>" required></td>
                     </tr>
                     <tr>
                         <td><label for="anneePublication">Année de publication</label></td>
-                        <td><input type="number" name="anneePublication" id="anneePublication" value="<?= $magazine->anneePublication ?>" required></td>
+                        <td><input type="number" name="anneePublication" id="anneePublication" value="<?= isset($_SESSION["anneePublication"]) ? $_SESSION["anneePublication"] : '' ?>" required></td>
                     </tr>
                     <tr>
                         <td><label for="type">Type</label></td>
-                        <td><input type="text" name="typeMagazine" id="typeMagazine" value="<?= $magazine->typeMagazine ?>" required></td>
+                        <td><input type="text" name="typeMagazine" id="typeMagazine" value="<?= isset($_SESSION["typeMagazine"]) ? $_SESSION["typeMagazine"] : '' ?>" required></td>
                     </tr>
                     </tbody>
                 </table>
