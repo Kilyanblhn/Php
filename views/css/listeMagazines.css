@@ -3,6 +3,11 @@ body{
     font-family: "Comfortaa", sans-serif;
 }
 
+a{
+    text-decoration: none;
+    color: #608fc2;
+}
+
 .list-mag-body{
     margin: 50px;
 }
@@ -11,15 +16,25 @@ body{
     color: #608fc2;
 }
 
-.line{
+/*table*/
+
+table{
+    width: 100%;
+    border-spacing: 0 2em;
+}
+
+tr{
+    width: 100%;
+    text-align: center;
+}
+
+td{
+    width: 20%;
+    list-style: none;
+}
+
+.action{
     display: flex;
-    padding: 10px;
-}
-
-.titleCase{
-    width: 300px;
-}
-
-.iconCase{
-    width: 50px;
+    justify-content: space-between;
+    padding-left: 110px;
 }
