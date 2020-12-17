@@ -9,21 +9,21 @@ class CDManager extends Manager
     public function nouveauCD(String $titre, bool $estEmprunte, String $artiste, String $genre){
         $db = $this->dbConnect();
         $stmt = $db->prepare('INSERT INTO `CD` (`titre`, `estEmprunte` `artiste`, `type`) VALUES (:titre, :estEmprunte, :artiste, :genre)');
-        $params = ['titre' => $_GET['titre'], 'estEmprunte' => $_GET['estEmprunte'], 'artiste' => $_GET['artiste'], 'genre' => $_GET['genre']];
+        $params = ['titre' => $titre, 'estEmprunte' => $estEmprunte, 'artiste' => $artiste, 'genre' => $genre];
         $stmt->execute($params);
     }
 
-    public function modifierCD(int $reference, String $titre, bool $estEmprunte, String $artiste, String $genre){
+    public function modifierCD(int $reference, String $titre, bool $estEmprunte, String $artiste, String $genre) : void {
         $db = $this->dbConnect();
         $stmt = $db->prepare('UPDATE `CD` SET titre = :titre, estEmprunte = :estEmprunte, artiste = :artiste, genre = :genre WHERE (`reference` = :reference)');
-        $params = ['reference' => $_GET['reference'], 'titre' => $_GET['titre'], 'estEmprunte' => $_GET['estEmprunte'], 'artiste' => $_GET['artiste'], 'genre' => $_GET['genre']];
+        $params = ['reference' => $reference, 'titre' => $titre, 'estEmprunte' => $estEmprunte, 'artiste' => $artiste, 'genre' => $genre];
         $stmt->execute($params);
     }
 
-    public function supprimerCD($reference){
+    public function supprimerCD($reference): void {
         $db = $this->dbConnect();
         $stmt = $db->prepare('DELETE FROM `CD` WHERE `reference` = :reference');
-        $params = ['reference' => $_GET['reference']];
+        $params = ['reference' => $reference];
         $stmt->execute($params);
     }
 
@@ -33,19 +33,19 @@ class CDManager extends Manager
         $db = $this->dbConnect();
         $listeCDs = $db->query('SELECT * FROM cd');
         while ($unCD = $listeCDs->fetch()) {
-            $cds[] = new CD($unCD["titre"], $unCD["estEmpunte"], $unCD["artiste"], $unCD["genre"]);
+            $cds[] = new CD($unCD["reference"], $unCD["titre"], $unCD["estEmprunte"], $unCD["artiste"], $unCD["genre"]);
         }
         return $cds;
     }
 
-    public function getCDById($reference) : CD {
+    public function getCDByRef($reference) : CD {
         $db = $this->dbConnect();
-        $stmt = $db->prepare('SELECT * FROM cd WHERE reference=?');
-        $stmt->execute(array(
-            $reference
-        ));
+        $stmt = $db->prepare('SELECT * FROM cd WHERE reference= :reference');
+        $params = ['reference' => $reference];
+        $stmt->execute($params);
+
         $unCD = $stmt->fetch();
 
-        return new CD($unCD["titre"], $unCD["estEmpunte"], $unCD["artiste"], $unCD["genre"]);
+        return new CD($unCD["reference"], $unCD["titre"], $unCD["estEmpunte"], $unCD["artiste"], $unCD["genre"]);
     }
 }

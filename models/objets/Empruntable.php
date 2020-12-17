@@ -4,7 +4,7 @@ require_once("models/objets/Exemplaire.php");
 
 class Empruntable extends Exemplaire
 {
-    private boolean $estEmprunte;
+    private bool $estEmprunte;
 
     /**
      * Empruntable constructor.

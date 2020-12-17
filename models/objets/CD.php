@@ -9,14 +9,15 @@ class CD extends Empruntable
 
     /**
      * CD constructor.
+     * @param int $reference
      * @param string $titre
      * @param bool $estEmprunte
      * @param String $artiste
      * @param String $genre
      */
-    public function __construct(string $titre, bool $estEmprunte, string $artiste, string $genre)
+    public function __construct(int $reference, string $titre, bool $estEmprunte, string $artiste, string $genre)
     {
-        parent::__construct($titre);
+        Exemplaire::__construct($reference, $titre);
         parent::__construct($estEmprunte);
         $this->artiste = $artiste;
         $this->genre = $genre;

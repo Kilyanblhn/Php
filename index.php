@@ -42,13 +42,12 @@ switch ($page){
                 require('views/nouveauMagazine.php');
                 break;
             case "creer":
-                if(isset($_POST["reference"]) && isset($_POST["titre"]) && isset($_POST["anneePublication"]) && isset($_POST["typeMagazine"])){
-                    $_SESSION["referenceMagazine"] = $_POST["reference"];
+                if( isset($_POST["titre"]) && isset($_POST["anneePublication"]) && isset($_POST["typeMagazine"])){
                     $_SESSION["titreMagazine"] = $_POST["titre"];
                     $_SESSION["anneePublication"] = $_POST["anneePublication"];
                     $_SESSION["typeMagazine"] = $_POST["typeMagazine"];
                 }
-                $magazineController->nouveauMagazine($_POST["reference"], $_POST["titre"], $_POST["anneePublication"], $_POST["typeMagazine"]);
+                $magazineController->nouveauMagazine($_POST["titre"], $_POST["anneePublication"], $_POST["typeMagazine"]);
                 break;
             case "modifier":
                 $magazineController->modifierMagazine($_POST["reference"], $_POST["titre"], $_POST["anneePublication"], $_POST["typeMagazine"]);
@@ -63,8 +62,33 @@ switch ($page){
     break;
     case "cd":
         switch ($action){
-            case "liste":default:
+            case "liste":
                 $cdController->getListeCDs();
+                break;
+            case "ajouter":
+                require('views/nouveauCD.php');
+                break;
+            case "creer":
+                if(isset($_POST["titre"]) && isset($_POST["estEmprunte"]) && isset($_POST["artiste"]) && isset($_POST["genre"])){
+                    $_SESSION["titreCD"] = $_POST["titre"];
+                    if($_POST["estEmprunte"] === 'on'){
+                        $estEmprunte = 1;
+                    } else {
+                        $estEmprunte = 0;
+                    }
+                    $_SESSION["artiste"] = $_POST["artiste"];
+                    $_SESSION["genre"] = $_POST["genre"];
+                }
+                $cdController->nouveauCD($_POST["titre"], $estEmprunte, $_POST["artiste"], $_POST["genre"]);
+                break;
+            case "modifier":
+                $cdController->modifierCD($_POST["reference"], $_POST["titre"], $_POST["artiste"], $_POST["genre"]);
+                break;
+            case "consulter":
+                $cdController->getCDByRef($reference);
+                break;
+            case "supprimer":
+                $cdController->supprimerCD($reference);
                 break;
         }
     break;

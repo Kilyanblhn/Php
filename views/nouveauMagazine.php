@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Modifications</title>
+    <title>Nouveau magazine</title>
     <meta charset="utf-8">
 </head>
 
@@ -22,10 +22,6 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td><label for="titre">Référence</label></td>
-                        <td><input type="text" name="reference" id="reference" value="<?= isset($_SESSION["referenceMagazine"]) ? $_SESSION["referenceMagazine"] : '' ?>" required></td>
-                    </tr>
                     <tr>
                         <td><label for="titre">Titre</label></td>
                         <td><input type="text" name="titre" id="titre" value="<?= isset($_SESSION["titreMagazine"]) ? $_SESSION["titreMagazine"] : '' ?>" required></td>

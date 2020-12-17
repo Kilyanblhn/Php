@@ -8,23 +8,25 @@ class CDController
 
     /**
      * CDController constructor.
-     * @param CDManager $cdManager
      */
     public function __construct()
     {
         $this->cdManager = new CDManager();
     }
 
-    function nouveauCD($titre, $artiste, $genre){
-        $this->cdManager->nouveauCD($titre, $artiste, $genre);
+    function nouveauCD($titre, $estEmprunte, $artiste, $genre){
+        $this->cdManager->nouveauCD($titre, $estEmprunte, $artiste, $genre);
+        header('Location: ?page=cd&action=liste');
     }
 
-    function modifierCD($id, $titre, $artiste, $genre){
-        $this->cdManager->modifierCD($id, $titre, $artiste, $genre);
+    function modifierCD($reference, $titre, $artiste, $genre){
+        $this->cdManager->modifierCD($reference, $titre, $artiste, $genre);
+        header('Location: ?page=cd&action=liste');
     }
 
-    function supprimerCD($id){
-        $this->cdManager->supprimerCD($id);
+    function supprimerCD($reference){
+        $this->cdManager->supprimerCD($reference);
+        header("Location: ?page=cd&action=liste");
     }
 
     function getListeCDs(){
@@ -32,8 +34,9 @@ class CDController
         require('views/listeCD.php');
     }
 
-    function getCDById($id){
-        $cd = $this->cdManager->getCDById($id);
+    function getCDByRef($reference){
+        $cd = $this->cdManager->getCDByRef($reference);
+        require('views/modifierCD.php');
     }
 
 }

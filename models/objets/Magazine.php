@@ -20,7 +20,7 @@ class Magazine extends Exemplaire
         $this->anneePublication = $anneePublication;
         $this->typeMagazine = $typeMagazine;
     }
-
+    
     /**
      * @return int
      */

@@ -15,8 +15,8 @@ class MagazineController
         $this->magazineManager = new MagazineManager();
     }
 
-    function nouveauMagazine($reference, $titre, $anneePublication, $typeMagazine){
-        $this->magazineManager->nouveauMagazine($reference, $titre, $anneePublication, $typeMagazine);
+    function nouveauMagazine($titre, $anneePublication, $typeMagazine){
+        $this->magazineManager->nouveauMagazine($titre, $anneePublication, $typeMagazine);
         header('Location: ?page=magazine&action=liste');
     }
 

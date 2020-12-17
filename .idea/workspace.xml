@@ -20,13 +20,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="327c4341-2294-4a27-8d58-c2bf260866ed" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/views/nouveauMagazine.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/modifierCD.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/nouveauCD.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/CDController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/CDController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/MagazineController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/MagazineController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/CDManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/CDManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/MagazineManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/MagazineManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/objets/CD.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/objets/CD.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/objets/Empruntable.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/objets/Empruntable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/objets/Magazine.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/objets/Magazine.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/css/listeCd.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/css/listeMagazines.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/listeCD.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/listeCD.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/listeMagazines.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/listeMagazines.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/modifierMagazine.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/modifierMagazine.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/nouveauMagazine.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/nouveauMagazine.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,10 +102,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="562" y="120" key="#com.intellij.ide.util.MemberChooser" timestamp="1607077098648">
+    <state x="562" y="120" key="#com.intellij.ide.util.MemberChooser" timestamp="1608226030795">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="562" y="120" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1607077098648" />
+    <state x="562" y="120" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1608226030795" />
     <state x="2482" y="121" key="#com.intellij.ide.util.MemberChooser/1920.0.1536.832/0.0.1920.1040@1920.0.1536.832" timestamp="1606929050363" />
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1607097825131">
       <screen x="0" y="0" width="1536" height="824" />
@@ -113,10 +122,10 @@
     </state>
     <state x="510" y="135" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1607072341206" />
     <state x="2430" y="136" key="NewPhpClassDialog/1920.0.1536.832/0.0.1920.1040@1920.0.1536.832" timestamp="1606928534176" />
-    <state x="604" y="336" key="NewPhpFileDialog" timestamp="1607771712871">
+    <state x="604" y="336" key="NewPhpFileDialog" timestamp="1608225184633">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1607771712871" />
+    <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1608225184633" />
     <state x="2524" y="339" key="NewPhpFileDialog/1920.0.1536.832/0.0.1920.1040@1920.0.1536.832" timestamp="1606926223557" />
     <state x="277" y="57" key="SettingsEditor" timestamp="1606763107975">
       <screen x="0" y="0" width="1536" height="824" />
