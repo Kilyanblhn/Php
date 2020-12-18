@@ -69,20 +69,26 @@ switch ($page){
                 require('views/nouveauCD.php');
                 break;
             case "creer":
-                if(isset($_POST["titre"]) && isset($_POST["estEmprunte"]) && isset($_POST["artiste"]) && isset($_POST["genre"])){
+                // MySQL n'ayant pas de booleen, je le transforme en entier
+                $estEmprunte = 0;
+                if(isset($_POST["estEmprunte"])){
+                    $estEmprunte = 1;
+                }
+
+                if(isset($_POST["titre"]) && isset($_POST["artiste"]) && isset($_POST["genre"])){
                     $_SESSION["titreCD"] = $_POST["titre"];
-                    if($_POST["estEmprunte"] === 'on'){
-                        $estEmprunte = 1;
-                    } else {
-                        $estEmprunte = 0;
-                    }
                     $_SESSION["artiste"] = $_POST["artiste"];
                     $_SESSION["genre"] = $_POST["genre"];
                 }
                 $cdController->nouveauCD($_POST["titre"], $estEmprunte, $_POST["artiste"], $_POST["genre"]);
                 break;
             case "modifier":
-                $cdController->modifierCD($_POST["reference"], $_POST["titre"], $_POST["artiste"], $_POST["genre"]);
+                // MySQL n'ayant pas de booleen, je le transforme en entier
+                $estEmprunte = 0;
+                if(isset($_POST["estEmprunte"])){
+                    $estEmprunte = 1;
+                }
+                $cdController->modifierCD($_POST["reference"], $_POST["titre"], $estEmprunte, $_POST["artiste"], $_POST["genre"]);
                 break;
             case "consulter":
                 $cdController->getCDByRef($reference);

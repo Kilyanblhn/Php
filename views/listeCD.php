@@ -20,6 +20,7 @@
                 <table>
                     <thead>
                     <tr>
+                        <th> Emprunté</th>
                         <th> Référence</th>
                         <th> Titre</th>
                         <th> Artiste</th>
@@ -30,6 +31,7 @@
                     <tbody>
                     <?php foreach ($cds as $cd) { ?>
                         <tr>
+                            <td><?= $cd->estEmprunte ? 'Oui': 'Non' ?></td>
                             <td><?= $cd->reference ?></td>
                             <td><?= $cd->titre ?></td>
                             <td><?= $cd->artiste ?></td>

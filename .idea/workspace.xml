@@ -20,22 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="327c4341-2294-4a27-8d58-c2bf260866ed" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/views/modifierCD.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/nouveauCD.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/CDController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/CDController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/MagazineController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/MagazineController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/CDManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/CDManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/MagazineManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/MagazineManager.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/objets/CD.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/objets/CD.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/objets/Empruntable.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/objets/Empruntable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/objets/Magazine.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/objets/Magazine.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/css/listeCd.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/css/listeMagazines.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/listeCD.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/listeCD.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/listeMagazines.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/listeMagazines.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/nouveauMagazine.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/nouveauMagazine.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/modifierCD.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/modifierCD.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/nouveauCD.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/nouveauCD.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +50,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="PHP" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../LP_AW_PHP_Dumas_Gastoud" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -83,6 +76,7 @@
       <workItem from="1607069283647" duration="11657000" />
       <workItem from="1607084529848" duration="15962000" />
       <workItem from="1607768503094" duration="7016000" />
+      <workItem from="1608278280339" duration="12386000" />
     </task>
     <servers />
   </component>
@@ -102,6 +96,14 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="194" y="254" key="#SQL_Dialects" timestamp="1608286000925">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="194" y="254" key="#SQL_Dialects/0.0.1536.824@0.0.1536.824" timestamp="1608286000925" />
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608288177006">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1608288177006" />
     <state x="562" y="120" key="#com.intellij.ide.util.MemberChooser" timestamp="1608226030795">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

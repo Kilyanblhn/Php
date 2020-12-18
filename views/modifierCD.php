@@ -13,7 +13,7 @@
     </div>
     <div class="body">
         <div class="contenu">
-            <h2>Modifier le magazine</h2>
+            <h2>Modifier le CD</h2>
             <form action="?page=cd&action=modifier" method="post">
                 <table>
                     <thead>
@@ -32,15 +32,15 @@
                     </tr>
                     <tr>
                         <td><label for="artiste">Artiste</label></td>
-                        <td><input type="number" name="genre" id="genre" value="<?= $cd->artiste ?>" required></td>
+                        <td><input type="text" name="artiste" id="artiste" value="<?= $cd->artiste ?>" required></td>
                     </tr>
                     <tr>
                         <td><label for="genre">Genre</label></td>
                         <td><input type="text" name="genre" id="genre" value="<?= $cd->genre ?>" required></td>
                     </tr>
                     <tr>
-                        <input type="checkbox" id="estEmprunte" name="estEmprunte">
-                        <label for="estEmprunte">Emprunté</label>
+                        <td><input type="checkbox" id="estEmprunte" name="estEmprunte" <?= ($cd->estEmprunte) ? 'checked' : '' ?>></td>
+                        <td><label for="estEmprunte">Emprunté</label></td>
                     </tr>
                     </tbody>
                 </table>

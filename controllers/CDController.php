@@ -19,8 +19,8 @@ class CDController
         header('Location: ?page=cd&action=liste');
     }
 
-    function modifierCD($reference, $titre, $artiste, $genre){
-        $this->cdManager->modifierCD($reference, $titre, $artiste, $genre);
+    function modifierCD($reference, $titre, $estEmprunte, $artiste, $genre){
+        $this->cdManager->modifierCD($reference, $titre, $estEmprunte, $artiste, $genre);
         header('Location: ?page=cd&action=liste');
     }
 

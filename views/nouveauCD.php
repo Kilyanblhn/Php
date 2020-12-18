@@ -34,12 +34,12 @@
                         <td><label for="genre">Genre</label></td>
                         <td><input type="text" name="genre" id="genre" value="<?= isset($_SESSION["genre"]) ? $_SESSION["genre"] : '' ?>" required></td>
                     </tr>
+                    <tr>
+                        <td><label for="estEmprunte">Emprunté</label></td>
+                        <td><input type="checkbox" id="estEmprunte" name="estEmprunte"></td>
+                    </tr>
                     </tbody>
                 </table>
-                <div>
-                    <input type="checkbox" id="estEmprunte" name="estEmprunte">
-                    <label for="estEmprunte">Emprunté</label>
-                </div>
                 <input type="submit" value="Sauvegarder">
             </form>
         </div>
